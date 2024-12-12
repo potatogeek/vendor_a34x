@@ -6,11 +6,36 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/a34x
 
 PRODUCT_COPY_FILES += \
-    vendor/samsung/a34x/proprietary/system_ext/bin/AudioSetParam:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/AudioSetParam \
+    vendor/samsung/a34x/proprietary/etc/audio_effects.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_effects.conf \
+    vendor/samsung/a34x/proprietary/etc/audio_effects.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_effects.xml \
+    vendor/samsung/a34x/proprietary/etc/audio_effects_common.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_effects_common.conf \
+    vendor/samsung/a34x/proprietary/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+    vendor/samsung/a34x/proprietary/etc/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_SYSTEM)/etc/seccomp_policy/mediacodec.policy \
+    vendor/samsung/a34x/proprietary/lib/libdatasource.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdatasource.so \
+    vendor/samsung/a34x/proprietary/lib/libdatasource_local_cache.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdatasource_local_cache.so \
+    vendor/samsung/a34x/proprietary/lib/libmedia_codeclist.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmedia_codeclist.so \
+    vendor/samsung/a34x/proprietary/lib/libomafldrm.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libomafldrm.so \
+    vendor/samsung/a34x/proprietary/lib/libstagefright_aidl_bufferpool2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libstagefright_aidl_bufferpool2.so \
+    vendor/samsung/a34x/proprietary/lib/libstagefright_bufferpool@2.0.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libstagefright_bufferpool@2.0.1.so \
+    vendor/samsung/a34x/proprietary/lib/libstagefright_codecbase.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libstagefright_codecbase.so \
+    vendor/samsung/a34x/proprietary/lib/libstagefright_framecapture_utils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libstagefright_framecapture_utils.so \
+    vendor/samsung/a34x/proprietary/lib/libstagefright_surface_utils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libstagefright_surface_utils.so \
+    vendor/samsung/a34x/proprietary/lib64/libdatasource.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdatasource.so \
+    vendor/samsung/a34x/proprietary/lib64/libdatasource_local_cache.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libdatasource_local_cache.so \
+    vendor/samsung/a34x/proprietary/lib64/libhdcp2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libhdcp2.so \
+    vendor/samsung/a34x/proprietary/lib64/libhdcp_client_aidl.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libhdcp_client_aidl.so \
+    vendor/samsung/a34x/proprietary/lib64/libmedia_codeclist.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmedia_codeclist.so \
+    vendor/samsung/a34x/proprietary/lib64/libomafldrm.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libomafldrm.so \
+    vendor/samsung/a34x/proprietary/lib64/libstagefright_aidl_bufferpool2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libstagefright_aidl_bufferpool2.so \
+    vendor/samsung/a34x/proprietary/lib64/libstagefright_bufferpool@2.0.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libstagefright_bufferpool@2.0.1.so \
+    vendor/samsung/a34x/proprietary/lib64/libstagefright_codecbase.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libstagefright_codecbase.so \
+    vendor/samsung/a34x/proprietary/lib64/libstagefright_framecapture_utils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libstagefright_framecapture_utils.so \
+    vendor/samsung/a34x/proprietary/lib64/libstagefright_hdcp.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libstagefright_hdcp.so \
+    vendor/samsung/a34x/proprietary/lib64/libstagefright_httplive_sec.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libstagefright_httplive_sec.so \
+    vendor/samsung/a34x/proprietary/lib64/libstagefright_surface_utils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libstagefright_surface_utils.so \
+    vendor/samsung/a34x/proprietary/lib64/vendor.samsung.hardware.security.hdcp.wifidisplay-V2-ndk.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.samsung.hardware.security.hdcp.wifidisplay-V2-ndk.so \
     vendor/samsung/a34x/proprietary/system_ext/etc/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/a2dp_audio_policy_configuration.xml \
     vendor/samsung/a34x/proprietary/system_ext/etc/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/a2dp_in_audio_policy_configuration.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/aee-commit:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/aee-commit \
-    vendor/samsung/a34x/proprietary/system_ext/etc/aee-config:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/aee-config \
     vendor/samsung/a34x/proprietary/system_ext/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/audio_policy_configuration.xml \
     vendor/samsung/a34x/proprietary/system_ext/etc/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
     vendor/samsung/a34x/proprietary/system_ext/etc/audio_policy_configuration_stub.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/audio_policy_configuration_stub.xml \
@@ -21,136 +46,9 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/system_ext/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/audio_policy_volumes.xml \
     vendor/samsung/a34x/proprietary/system_ext/etc/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/bluetooth_audio_policy_configuration.xml \
     vendor/samsung/a34x/proprietary/system_ext/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default_volume_tables.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/fs_config_dirs:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/fs_config_dirs \
-    vendor/samsung/a34x/proprietary/system_ext/etc/fs_config_files:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/fs_config_files \
     vendor/samsung/a34x/proprietary/system_ext/etc/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/hearing_aid_audio_policy_configuration.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/init/hw/init.aee.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/hw/init.aee.rc \
-    vendor/samsung/a34x/proprietary/system_ext/etc/init/hw/init.usb.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/hw/init.usb.rc \
-    vendor/samsung/a34x/proprietary/system_ext/etc/init/hw/meta_init.system.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/hw/meta_init.system.rc \
-    vendor/samsung/a34x/proprietary/system_ext/etc/init/hw/vendor_init_as_system.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/hw/vendor_init_as_system.rc \
-    vendor/samsung/a34x/proprietary/system_ext/etc/init/netdiag.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/netdiag.rc \
-    vendor/samsung/a34x/proprietary/system_ext/etc/nr-city.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/nr-city.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/permissions/com.android.carrierconfig.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.carrierconfig.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/permissions/com.android.emergency.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.emergency.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/permissions/com.android.storagemanager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.storagemanager.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/permissions/com.android.systemui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.systemui.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/permissions/com.samsung.systemui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.samsung.systemui.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/permissions/privapp-permissions-google-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-google-system_ext.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/permissions/system-ext-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/system-ext-permissions-mediatek.xml \
     vendor/samsung/a34x/proprietary/system_ext/etc/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/r_submix_audio_policy_configuration.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/spn-conf.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/sysconfig/com.mediatek.ims.config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.mediatek.ims.config.xml \
     vendor/samsung/a34x/proprietary/system_ext/etc/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/usb_audio_policy_configuration.xml \
-    vendor/samsung/a34x/proprietary/system_ext/etc/wmshell.protolog.json.gz:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wmshell.protolog.json.gz \
-    vendor/samsung/a34x/proprietary/system_ext/lib/android.hardware.radio.config@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/android.hardware.radio.config@1.1.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/android.hardware.radio.config@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/android.hardware.radio.config@1.2.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/android.hardware.radio.config@1.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/android.hardware.radio.config@1.3.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/android.hardware.radio@1.5.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/android.hardware.radio@1.5.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/android.hardware.radio@1.6.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/android.hardware.radio@1.6.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libJpegOal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libJpegOal.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libMiraVision_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libMiraVision_jni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libPQDCjni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libPQDCjni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libPQjni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libPQjni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/lib_remote_simlock.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/lib_remote_simlock.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libaed.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libaed.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libapuwareapusys.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libapuwareapusys.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libapuwareapusys_v2.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libapuwareapusys_v2.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libapuwarehmp.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libapuwarehmp.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libapuwareutils.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libapuwareutils.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libapuwareutils_v2.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libapuwareutils_v2.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libapuwarexrp.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libapuwarexrp.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libapuwarexrp_v2.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libapuwarexrp_v2.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libarmnn_ndk.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libarmnn_ndk.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libaudio_param_parser-sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libaudio_param_parser-sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libaudio_param_parser-sys@8.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libaudio_param_parser-sys@8.1.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libaudio_param_parser-sys@aidl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libaudio_param_parser-sys@aidl.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libaudiocompensationfilter.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libaudiocompensationfilter.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libaudiocomponentengine.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libaudiocomponentengine.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libaudiotoolkit.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libaudiotoolkit.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libbessound_hd_mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libbessound_hd_mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libblisrc.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libblisrc.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libcmdl_ndk.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libcmdl_ndk.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libcompress.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libcompress.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libcustom_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libcustom_jni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libcustom_prop.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libcustom_prop.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libdisp_dejitter.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdisp_dejitter.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libdrmmtkutil.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdrmmtkutil.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libdrmmtkwhitelist.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdrmmtkwhitelist.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libged_kpi.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libged_kpi.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libged_sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libged_sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libgpud_sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libgpud_sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libgralloc_extra_sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libgralloc_extra_sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libgui_debug.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libgui_debug.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libjni_pq.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libjni_pq.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libjpeg-alpha-oal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libjpeg-alpha-oal.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libjpeg-alpha.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libjpeg-alpha.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmcv_runtime_usdk.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmcv_runtime_usdk.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmdloggerrecycle.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmdloggerrecycle.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmediatek_exceptionlog.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmediatek_exceptionlog.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmemoryDumpEncoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmemoryDumpEncoder.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmtkisp_metadata_sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmtkisp_metadata_sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmtkperf_client.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmtkperf_client.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_cic_ci_compiler.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_cic_ci_compiler.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_cic_ci_compiler_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_cic_ci_compiler_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_clc_14_mvpu_debuginfo_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_clc_14_mvpu_debuginfo_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_clc_14_mvpu_elf_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_clc_14_mvpu_elf_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_clc_14_mvpu_utility_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_clc_14_mvpu_utility_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_clc_mvpu_debuginfo.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_clc_mvpu_debuginfo.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_clc_mvpu_elf.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_clc_mvpu_elf.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_clc_mvpu_utility.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_clc_mvpu_utility.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_config.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_config.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_engine.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_engine.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_engine_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_engine_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_engine_25_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_engine_25_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_engine_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_engine_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_pattern.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_pattern.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_pattern_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_pattern_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_pattern_25_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_pattern_25_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_pattern_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_pattern_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_runtime.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_runtime.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_runtime_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_runtime_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_runtime_25_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_runtime_25_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_runtime_builtin.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_runtime_builtin.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_runtime_builtin_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_runtime_builtin_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpu_runtime_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpu_runtime_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpuop25_mtk_cv.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpuop25_mtk_cv.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpuop25_mtk_nn.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpuop25_mtk_nn.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpuop_mtk_cv.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpuop_mtk_cv.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libmvpuop_mtk_nn.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmvpuop_mtk_nn.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libnativecheck-jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libnativecheck-jni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libneuron_graph_delegate.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libneuron_graph_delegate.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libneuronusdk_adapter.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libneuronusdk_adapter.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libneuropilot_hal_utils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libneuropilot_hal_utils.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libnir_neon_driver_ndk.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libnir_neon_driver_ndk.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libperfctl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libperfctl.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libpowerhalwrap.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libpowerhalwrap.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libpowerhalwrap_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libpowerhalwrap_jni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libsf_cpupolicy.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libsf_cpupolicy.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libsf_debug.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libsf_debug.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libsf_perf.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libsf_perf.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libsmartpower_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libsmartpower_jni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libsysenv_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libsysenv_system.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libteeservice_client.trustonic.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libteeservice_client.trustonic.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libtflite_mtk.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libtflite_mtk.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libtflite_mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libtflite_mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libthroughputmode.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libthroughputmode.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libudf.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libudf.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libui_ext.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libui_ext.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/libvsync_hint.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libvsync_hint.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.apuware.apusys-V2-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.apuware.apusys-V2-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.apuware.apusys@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.apuware.apusys@1.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.apuware.apusys@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.apuware.apusys@2.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.apuware.apusys@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.apuware.apusys@2.1.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.apuware.hmp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.apuware.hmp@1.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.apuware.utils-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.apuware.utils-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.apuware.utils@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.apuware.utils@1.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.apuware.utils@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.apuware.utils@2.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.apuware.xrp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.apuware.xrp@1.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.apuware.xrp@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.apuware.xrp@2.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.audio-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.audio-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.audio@7.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.audio@7.1.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.audio@8.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.audio@8.1.so \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.camera.isphal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.camera.isphal@1.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.mms@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.mms@1.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.mms@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.mms@1.1.so \
@@ -160,139 +58,14 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.mtkpower@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.mtkpower@1.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.mtkpower@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.mtkpower@1.1.so \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.mtkpower@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.mtkpower@1.2.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.mtkpower_applist-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.mtkpower_applist-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.mtkradioex.rsu-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.mtkradioex.rsu-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.mtkradioex.se-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.mtkradioex.se-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.mtkradioex.sim-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.mtkradioex.sim-V1-ndk.so \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.mtkradioex@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.mtkradioex@3.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.pq@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.pq@2.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.pq@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.pq@2.1.so \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.pq@2.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.pq@2.2.so \
     vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.pq@2.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.pq@2.3.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib/vendor.mediatek.hardware.pq_aidl-V2-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.mediatek.hardware.pq_aidl-V2-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/android.hardware.radio.config@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/android.hardware.radio.config@1.1.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/android.hardware.radio.config@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/android.hardware.radio.config@1.2.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/android.hardware.radio.config@1.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/android.hardware.radio.config@1.3.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/android.hardware.radio@1.5.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/android.hardware.radio@1.5.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/android.hardware.radio@1.6.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/android.hardware.radio@1.6.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libJpegOal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libJpegOal.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libMiraVision_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libMiraVision_jni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libPQDCjni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libPQDCjni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libPQjni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libPQjni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/lib_remote_simlock.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib_remote_simlock.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libaed.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaed.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libapuwareapusys.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libapuwareapusys.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libapuwareapusys_v2.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libapuwareapusys_v2.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libapuwarehmp.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libapuwarehmp.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libapuwareutils.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libapuwareutils.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libapuwareutils_v2.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libapuwareutils_v2.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libapuwarexrp.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libapuwarexrp.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libapuwarexrp_v2.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libapuwarexrp_v2.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libarmnn_ndk.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libarmnn_ndk.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libaudio_param_parser-sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaudio_param_parser-sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libaudio_param_parser-sys@8.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaudio_param_parser-sys@8.1.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libaudio_param_parser-sys@aidl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaudio_param_parser-sys@aidl.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libaudiocompensationfilter.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaudiocompensationfilter.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libaudiocomponentengine.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaudiocomponentengine.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libaudiotoolkit.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaudiotoolkit.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libbessound_hd_mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libbessound_hd_mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libblisrc.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libblisrc.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libccci_util_sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libccci_util_sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libcmdl_ndk.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libcmdl_ndk.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libcomposer_ext.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libcomposer_ext.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libcompress.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libcompress.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libcustom_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libcustom_jni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libcustom_prop.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libcustom_prop.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libdisp_dejitter.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdisp_dejitter.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libdrmmtkutil.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdrmmtkutil.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libdrmmtkwhitelist.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdrmmtkwhitelist.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libged_kpi.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libged_kpi.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libged_sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libged_sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libgpud_sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libgpud_sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libgralloc_extra_sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libgralloc_extra_sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libgui_debug.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libgui_debug.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libjni_pq.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libjni_pq.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libjpeg-alpha-oal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libjpeg-alpha-oal.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libjpeg-alpha.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libjpeg-alpha.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmcv_runtime_usdk.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmcv_runtime_usdk.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmdloggerrecycle.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmdloggerrecycle.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmediatek_exceptionlog.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmediatek_exceptionlog.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmemoryDumpEncoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmemoryDumpEncoder.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmtkisp_metadata_sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmtkisp_metadata_sys.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmtkperf_client.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmtkperf_client.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_cic_ci_compiler.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_cic_ci_compiler.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_cic_ci_compiler_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_cic_ci_compiler_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_clc_14_mvpu_debuginfo_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_clc_14_mvpu_debuginfo_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_clc_14_mvpu_elf_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_clc_14_mvpu_elf_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_clc_14_mvpu_utility_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_clc_14_mvpu_utility_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_clc_mvpu_debuginfo.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_clc_mvpu_debuginfo.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_clc_mvpu_elf.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_clc_mvpu_elf.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_clc_mvpu_utility.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_clc_mvpu_utility.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_config.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_config.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_engine.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_engine.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_engine_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_engine_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_engine_25_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_engine_25_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_engine_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_engine_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_pattern.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_pattern.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_pattern_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_pattern_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_pattern_25_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_pattern_25_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_pattern_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_pattern_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_runtime.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_runtime.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_runtime_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_runtime_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_runtime_25_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_runtime_25_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_runtime_builtin.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_runtime_builtin.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_runtime_builtin_25.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_runtime_builtin_25.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpu_runtime_pub.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpu_runtime_pub.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpuop25_mtk_cv.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpuop25_mtk_cv.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpuop25_mtk_nn.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpuop25_mtk_nn.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpuop_mtk_cv.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpuop_mtk_cv.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libmvpuop_mtk_nn.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmvpuop_mtk_nn.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libnativecheck-jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libnativecheck-jni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libneuron_graph_delegate.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libneuron_graph_delegate.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libneuronusdk_adapter.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libneuronusdk_adapter.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libneuropilot_hal_utils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libneuropilot_hal_utils.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libnir_neon_driver_ndk.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libnir_neon_driver_ndk.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libpcap_bak.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libpcap_bak.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libperfctl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libperfctl.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libpowerhalwrap.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libpowerhalwrap.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libpowerhalwrap_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libpowerhalwrap_jni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libsf_cpupolicy.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libsf_cpupolicy.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libsf_debug.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libsf_debug.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libsf_perf.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libsf_perf.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libshowlogo.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libshowlogo.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libsmartpower_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libsmartpower_jni.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libsysenv_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libsysenv_system.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libteeservice_client.trustonic.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libteeservice_client.trustonic.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libterservice.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libterservice.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libtflite_mtk.mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libtflite_mtk.mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libtflite_mtk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libtflite_mtk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libthroughputmode.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libthroughputmode.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libudf.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libudf.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libui_ext.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libui_ext.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/libvsync_hint.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libvsync_hint.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.framework.mtksf_ext-V3-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.framework.mtksf_ext-V3-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.apuware.apusys-V2-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.apuware.apusys-V2-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.apuware.apusys@1.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.apuware.utils-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.apuware.utils-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.apuware.utils@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.apuware.utils@1.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.audio-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.audio-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.audio@7.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.audio@7.1.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.audio@8.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.audio@8.1.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.composer_ext-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.composer_ext-V1-ndk.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.composer_ext@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.composer_ext@1.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.dmc-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.dmc-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.dmc@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.dmc@1.0.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.dmc@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.dmc@1.1.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.dmc@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.dmc@1.2.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.log-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.log-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.log@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.log@1.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mms@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mms@1.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mms@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mms@1.1.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mms@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mms@1.2.so \
@@ -301,16 +74,11 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mtkpower@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mtkpower@1.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mtkpower@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mtkpower@1.1.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mtkpower@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mtkpower@1.2.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mtkpower_applist-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mtkpower_applist-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mtkradioex.rsu-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mtkradioex.rsu-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mtkradioex.se-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mtkradioex.se-V1-ndk.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mtkradioex.sim-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mtkradioex.sim-V1-ndk.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.pq@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.pq@2.0.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.pq@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.pq@2.1.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.pq@2.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.pq@2.2.so \
     vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.pq@2.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.pq@2.3.so \
-    vendor/samsung/a34x/proprietary/system_ext/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so \
     vendor/samsung/a34x/proprietary/vendor/bin/AgentTest:$(TARGET_COPY_OUT_VENDOR)/bin/AgentTest \
     vendor/samsung/a34x/proprietary/vendor/bin/add.pb:$(TARGET_COPY_OUT_VENDOR)/bin/add.pb \
     vendor/samsung/a34x/proprietary/vendor/bin/adsp_log:$(TARGET_COPY_OUT_VENDOR)/bin/adsp_log \
@@ -322,6 +90,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/bin/audiocmdservice_atci:$(TARGET_COPY_OUT_VENDOR)/bin/audiocmdservice_atci \
     vendor/samsung/a34x/proprietary/vendor/bin/autobt:$(TARGET_COPY_OUT_VENDOR)/bin/autobt \
     vendor/samsung/a34x/proprietary/vendor/bin/bip_ap:$(TARGET_COPY_OUT_VENDOR)/bin/bip_ap \
+    vendor/samsung/a34x/proprietary/vendor/bin/boringssl_self_test32:$(TARGET_COPY_OUT_VENDOR)/bin/boringssl_self_test32 \
     vendor/samsung/a34x/proprietary/vendor/bin/boringssl_self_test64:$(TARGET_COPY_OUT_VENDOR)/bin/boringssl_self_test64 \
     vendor/samsung/a34x/proprietary/vendor/bin/bt_dump:$(TARGET_COPY_OUT_VENDOR)/bin/bt_dump \
     vendor/samsung/a34x/proprietary/vendor/bin/camera_tilt_calibration_info_1_2_default.bin:$(TARGET_COPY_OUT_VENDOR)/bin/camera_tilt_calibration_info_1_2_default.bin \
@@ -337,6 +106,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/bin/doeapp-memtester:$(TARGET_COPY_OUT_VENDOR)/bin/doeapp-memtester \
     vendor/samsung/a34x/proprietary/vendor/bin/doeapp-sat:$(TARGET_COPY_OUT_VENDOR)/bin/doeapp-sat \
     vendor/samsung/a34x/proprietary/vendor/bin/dtc_vendor:$(TARGET_COPY_OUT_VENDOR)/bin/dtc_vendor \
+    vendor/samsung/a34x/proprietary/vendor/bin/dumpsys:$(TARGET_COPY_OUT_VENDOR)/bin/dumpsys \
     vendor/samsung/a34x/proprietary/vendor/bin/eara_io_service:$(TARGET_COPY_OUT_VENDOR)/bin/eara_io_service \
     vendor/samsung/a34x/proprietary/vendor/bin/emservice:$(TARGET_COPY_OUT_VENDOR)/bin/emservice \
     vendor/samsung/a34x/proprietary/vendor/bin/factory:$(TARGET_COPY_OUT_VENDOR)/bin/factory \
@@ -344,21 +114,27 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/bin/fuelgauged:$(TARGET_COPY_OUT_VENDOR)/bin/fuelgauged \
     vendor/samsung/a34x/proprietary/vendor/bin/fuelgauged_nvram:$(TARGET_COPY_OUT_VENDOR)/bin/fuelgauged_nvram \
     vendor/samsung/a34x/proprietary/vendor/bin/gbe:$(TARGET_COPY_OUT_VENDOR)/bin/gbe \
+    vendor/samsung/a34x/proprietary/vendor/bin/hostapd_cli:$(TARGET_COPY_OUT_VENDOR)/bin/hostapd_cli \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.audio.service.mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.audio.service.mediatek \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.1-service-mediatek \
+    vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.cas@1.2-service-lazy:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.cas@1.2-service-lazy \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.clearkey:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.4-service.clearkey \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.4-service.widevine \
+    vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.dumpstate@1.1-service-lazy:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.dumpstate@1.1-service-lazy \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.graphics.composer@2.3-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.graphics.composer@2.3-service \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.health@2.1-service-samsung:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.health@2.1-service-samsung \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.c2@1.2-mediatek \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.c2@1.2-mediatek-64b \
+    vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.media.omx@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.omx@1.0-service \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.memtrack@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.memtrack@1.0-service \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.security.keymint-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.security.keymint-service \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.sensors@2.0-service.multihal:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.sensors@2.0-service.multihal \
+    vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.usb@1.3-service.coral:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb@1.3-service.coral \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/android.hardware.wifi@1.0-service-lazy:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.wifi@1.0-service-lazy \
+    vendor/samsung/a34x/proprietary/vendor/bin/hw/hostapd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/hostapd \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/macloader:$(TARGET_COPY_OUT_VENDOR)/bin/hw/macloader \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/mfgloader:$(TARGET_COPY_OUT_VENDOR)/bin/hw/mfgloader \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/rild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/rild \
@@ -394,6 +170,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/vendor.samsung.hardware.tlc.payment@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung.hardware.tlc.payment@1.0-service \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/vendor.samsung.hardware.vibrator-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung.hardware.vibrator-service \
     vendor/samsung/a34x/proprietary/vendor/bin/hw/vendor.samsung.hardware.wifi@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung.hardware.wifi@2.0-service \
+    vendor/samsung/a34x/proprietary/vendor/bin/hw/wpa_supplicant:$(TARGET_COPY_OUT_VENDOR)/bin/hw/wpa_supplicant \
     vendor/samsung/a34x/proprietary/vendor/bin/iod:$(TARGET_COPY_OUT_VENDOR)/bin/iod \
     vendor/samsung/a34x/proprietary/vendor/bin/ipsec_mon:$(TARGET_COPY_OUT_VENDOR)/bin/ipsec_mon \
     vendor/samsung/a34x/proprietary/vendor/bin/jpegtool:$(TARGET_COPY_OUT_VENDOR)/bin/jpegtool \
@@ -427,12 +204,14 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/bin/vendor.samsung.hardware.security.fkeymaster-service:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.samsung.hardware.security.fkeymaster-service \
     vendor/samsung/a34x/proprietary/vendor/bin/vendor.samsung.hardware.security.hdcp.wifidisplay-service:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.samsung.hardware.security.hdcp.wifidisplay-service \
     vendor/samsung/a34x/proprietary/vendor/bin/vendor.samsung.hardware.security.proca@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.samsung.hardware.security.proca@2.0-service \
+    vendor/samsung/a34x/proprietary/vendor/bin/vendor.samsung.hardware.security.ssu-service:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.samsung.hardware.security.ssu-service \
     vendor/samsung/a34x/proprietary/vendor/bin/vendor.samsung.hardware.security.vaultkeeper@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.samsung.hardware.security.vaultkeeper@2.0-service \
     vendor/samsung/a34x/proprietary/vendor/bin/volte_clientapi_ua:$(TARGET_COPY_OUT_VENDOR)/bin/volte_clientapi_ua \
     vendor/samsung/a34x/proprietary/vendor/bin/volte_rcs_ua:$(TARGET_COPY_OUT_VENDOR)/bin/volte_rcs_ua \
     vendor/samsung/a34x/proprietary/vendor/bin/vpud:$(TARGET_COPY_OUT_VENDOR)/bin/vpud \
     vendor/samsung/a34x/proprietary/vendor/bin/wifi_dump:$(TARGET_COPY_OUT_VENDOR)/bin/wifi_dump \
     vendor/samsung/a34x/proprietary/vendor/bin/wlan_assistant:$(TARGET_COPY_OUT_VENDOR)/bin/wlan_assistant \
+    vendor/samsung/a34x/proprietary/vendor/bin/wpa_cli:$(TARGET_COPY_OUT_VENDOR)/bin/wpa_cli \
     vendor/samsung/a34x/proprietary/vendor/bin/wvkprov:$(TARGET_COPY_OUT_VENDOR)/bin/wvkprov \
     vendor/samsung/a34x/proprietary/vendor/etc/.tp/.ht120.mtc:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/.ht120.mtc \
     vendor/samsung/a34x/proprietary/vendor/etc/.tp/.thermal_policy_08:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/.thermal_policy_08 \
@@ -454,6 +233,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/apdb/APDB_MT6853_S01__W2401:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6853_S01__W2401 \
     vendor/samsung/a34x/proprietary/vendor/etc/apdb/APDB_MT6853_S01__W2401_ENUM:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6853_S01__W2401_ENUM \
     vendor/samsung/a34x/proprietary/vendor/etc/armnn_app.config:$(TARGET_COPY_OUT_VENDOR)/etc/armnn_app.config \
+    vendor/samsung/a34x/proprietary/vendor/etc/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/audio_device_gain.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device_gain.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/audio_effects_sec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_sec.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/audio_effects_spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_spatializer.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/audio_em.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_em.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/audio_param/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/audio_param/AudioParamOptions_vext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions_vext.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/audio_param/BtInfo_AudioParam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/BtInfo_AudioParam.xml \
@@ -588,6 +373,10 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/audio_param/Volume_AudioParam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_AudioParam.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/audio_param/Volume_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_ParamUnitDesc.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
+    vendor/samsung/a34x/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/audio_policy_configuration_sec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_sec.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/aurisys_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aurisys_config.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/aurisys_config_hifi3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aurisys_config_hifi3.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/beauty/settings.dat:$(TARGET_COPY_OUT_VENDOR)/etc/beauty/settings.dat \
@@ -596,6 +385,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     vendor/samsung/a34x/proprietary/vendor/etc/cust_color.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cust_color.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/dax3_media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dax3_media_codecs_dolby_audio.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/dpolicy:$(TARGET_COPY_OUT_VENDOR)/etc/dpolicy \
     vendor/samsung/a34x/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
@@ -610,6 +400,10 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/ecc_list_preference.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_preference.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/factory.ini:$(TARGET_COPY_OUT_VENDOR)/etc/factory.ini \
     vendor/samsung/a34x/proprietary/vendor/etc/floating_feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/floating_feature.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/fstab.emmc:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.emmc \
+    vendor/samsung/a34x/proprietary/vendor/etc/fstab.enableswap:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.enableswap \
+    vendor/samsung/a34x/proprietary/vendor/etc/fstab.mt6877:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mt6877 \
+    vendor/samsung/a34x/proprietary/vendor/etc/fstab.ramplus:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.ramplus \
     vendor/samsung/a34x/proprietary/vendor/etc/fstb.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/fstb.cfg \
     vendor/samsung/a34x/proprietary/vendor/etc/gbe.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gbe.cfg \
     vendor/samsung/a34x/proprietary/vendor/etc/gnss/MNL_Config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/MNL_Config.xml \
@@ -627,17 +421,21 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/init/aee_aedv64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/aee_aedv64.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.audio.service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service.mediatek.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc \
+    vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.cas@1.2-service-lazy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.cas@1.2-service-lazy.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.clearkey.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.clearkey.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
+    vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.dumpstate@1.1-service-lazy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate@1.1-service-lazy.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.graphics.composer@2.3-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@2.3-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.health@2.1-service-samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.health@2.1-service-samsung.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
+    vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.media.omx@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.omx@1.0-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.memtrack@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.memtrack@1.0-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.security.keymint-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.sensors@2.0-service-multihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors@2.0-service-multihal.rc \
+    vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.usb@1.3-service.coral.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.3-service.coral.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.wifi.supplicant-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi.supplicant-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/android.hardware.wifi@1.0-service-lazy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service-lazy.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/audiocmdservice_atci.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/audiocmdservice_atci.rc \
@@ -654,7 +452,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/gbe.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/gbe.rc \
-    vendor/samsung/a34x/proprietary/vendor/etc/init/hw/init.audio.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.audio.samsung.rc \
+    vendor/samsung/a34x/proprietary/vendor/etc/init/hostapd.android.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hostapd.android.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/hyper-default-sec.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hyper-default-sec.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/init.a34x.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.a34x.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/init.bip_ap.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.bip_ap.rc \
@@ -711,6 +509,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/vendor.samsung.hardware.security.hdcp.wifidisplay-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.hdcp.wifidisplay-default.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/vendor.samsung.hardware.security.skpm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.skpm@1.0-service.rc \
+    vendor/samsung/a34x/proprietary/vendor/etc/init/vendor.samsung.hardware.security.ssu-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.ssu-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/vendor.samsung.hardware.snap-lazy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.snap-lazy.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/vendor.samsung.hardware.sysinput@1.3-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.sysinput@1.3-service.rc \
@@ -724,6 +523,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/init/vendor.samsung.hardware.wifi@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.wifi@2.0-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/vendor.samsung.rilchip.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rilchip.mediatek.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/vendor_flash_recovery.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor_flash_recovery.rc \
+    vendor/samsung/a34x/proprietary/vendor/etc/init/vndservicemanager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vndservicemanager.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/volte_clientapi_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_clientapi_ua.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/volte_rcs_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_rcs_ua.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/vpud.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vpud.rc \
@@ -732,13 +532,23 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/init/wsm-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wsm-service.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
+    vendor/samsung/a34x/proprietary/vendor/etc/linker.config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/linker.config.pb \
     vendor/samsung/a34x/proprietary/vendor/etc/locale/plmn_delta_eng.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_eng.bin \
     vendor/samsung/a34x/proprietary/vendor/etc/locale/plmn_delta_zh-rCN.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rCN.bin \
     vendor/samsung/a34x/proprietary/vendor/etc/locale/plmn_delta_zh-rHK.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rHK.bin \
     vendor/samsung/a34x/proprietary/vendor/etc/locale/plmn_delta_zh-rTW.bin:$(TARGET_COPY_OUT_VENDOR)/etc/locale/plmn_delta_zh-rTW.bin \
+    vendor/samsung/a34x/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/media_codecs_c2_sec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_sec.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/media_codecs_c2_sec_ape.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_sec_ape.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/media_codecs_c2_sec_qcp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_sec_qcp.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/media_codecs_mediatek_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_mediatek_audio.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/media_codecs_mediatek_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_mediatek_video.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/mercury.json:$(TARGET_COPY_OUT_VENDOR)/etc/mercury.json \
     vendor/samsung/a34x/proprietary/vendor/etc/midas/SRIBMQA_aiBLURESTIMATE_V100_FP32.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/midas/SRIBMQA_aiBLURESTIMATE_V100_FP32.tflite \
     vendor/samsung/a34x/proprietary/vendor/etc/midas/SRIBMQA_aiFiQA_V100_FP32.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/midas/SRIBMQA_aiFiQA_V100_FP32.tflite \
@@ -756,6 +566,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/midas/deflare/srcb_flare_enhancement.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/midas/deflare/srcb_flare_enhancement.tflite \
     vendor/samsung/a34x/proprietary/vendor/etc/midas/deflare/srcb_flare_estimate.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/midas/deflare/srcb_flare_estimate.tflite \
     vendor/samsung/a34x/proprietary/vendor/etc/midas/midas_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/midas/midas_config.json \
+    vendor/samsung/a34x/proprietary/vendor/etc/mkshrc:$(TARGET_COPY_OUT_VENDOR)/etc/mkshrc \
     vendor/samsung/a34x/proprietary/vendor/etc/mtk_omx_core.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_omx_core.cfg \
     vendor/samsung/a34x/proprietary/vendor/etc/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/mtu-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtu-conf.xml \
@@ -764,11 +575,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/nhw:$(TARGET_COPY_OUT_VENDOR)/etc/nhw \
     vendor/samsung/a34x/proprietary/vendor/etc/partition_permission.sh:$(TARGET_COPY_OUT_VENDOR)/etc/partition_permission.sh \
     vendor/samsung/a34x/proprietary/vendor/etc/pdpcnt-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pdpcnt-conf.xml \
-    vendor/samsung/a34x/proprietary/vendor/etc/permissions/android.hardware.hardware_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml \
-    vendor/samsung/a34x/proprietary/vendor/etc/permissions/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
-    vendor/samsung/a34x/proprietary/vendor/etc/permissions/com.mediatek.hardware.vow_dsp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.mediatek.hardware.vow_dsp.xml \
-    vendor/samsung/a34x/proprietary/vendor/etc/permissions/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
-    vendor/samsung/a34x/proprietary/vendor/etc/permissions/vendor.samsung.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.samsung.hardware.telephony.gsm.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/plmn_delta.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta.bin \
     vendor/samsung/a34x/proprietary/vendor/etc/plmn_delta_attaio.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_attaio.bin \
     vendor/samsung/a34x/proprietary/vendor/etc/plmn_delta_hktw.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_hktw.bin \
@@ -777,6 +583,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/power_app_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_app_cfg.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/powercontable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
+    vendor/samsung/a34x/proprietary/vendor/etc/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/recovery-resource.dat:$(TARGET_COPY_OUT_VENDOR)/etc/recovery-resource.dat \
     vendor/samsung/a34x/proprietary/vendor/etc/saiv/aisolution_1.0/BrightModel-timestamp:$(TARGET_COPY_OUT_VENDOR)/etc/saiv/aisolution_1.0/BrightModel-timestamp \
     vendor/samsung/a34x/proprietary/vendor/etc/saiv/aisolution_1.0/CIGSOL_lowlight_v9_tunable_float_mix08.dla:$(TARGET_COPY_OUT_VENDOR)/etc/saiv/aisolution_1.0/CIGSOL_lowlight_v9_tunable_float_mix08.dla \
@@ -796,7 +604,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/saiv/image_understanding/db/aic_detector/aic_detector_cnn.info:$(TARGET_COPY_OUT_VENDOR)/etc/saiv/image_understanding/db/aic_detector/aic_detector_cnn.info \
     vendor/samsung/a34x/proprietary/vendor/etc/saiv/image_understanding/db/aic_detector/aic_detector_cnn_light.caffemodel:$(TARGET_COPY_OUT_VENDOR)/etc/saiv/image_understanding/db/aic_detector/aic_detector_cnn_light.caffemodel \
     vendor/samsung/a34x/proprietary/vendor/etc/sec_audio_volume_curve.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sec_audio_volume_curve.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy \
     vendor/samsung/a34x/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy \
+    vendor/samsung/a34x/proprietary/vendor/etc/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    vendor/samsung/a34x/proprietary/vendor/etc/seccomp_policy/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
+    vendor/samsung/a34x/proprietary/vendor/etc/seccomp_policy/mediaextractor_sec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor_sec.policy \
+    vendor/samsung/a34x/proprietary/vendor/etc/seccomp_policy/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy \
     vendor/samsung/a34x/proprietary/vendor/etc/seccomp_policy/samsung.software.media.c2-base-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/samsung.software.media.c2-base-policy \
     vendor/samsung/a34x/proprietary/vendor/etc/seccomp_policy/samsung.software.media.c2-ext-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/samsung.software.media.c2-ext-policy \
     vendor/samsung/a34x/proprietary/vendor/etc/security/cacerts/01419da9.0:$(TARGET_COPY_OUT_VENDOR)/etc/security/cacerts/01419da9.0 \
@@ -924,6 +737,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/security/cacerts/fb5fa911.0:$(TARGET_COPY_OUT_VENDOR)/etc/security/cacerts/fb5fa911.0 \
     vendor/samsung/a34x/proprietary/vendor/etc/security/cacerts/fd08c599.0:$(TARGET_COPY_OUT_VENDOR)/etc/security/cacerts/fd08c599.0 \
     vendor/samsung/a34x/proprietary/vendor/etc/security/cacerts/fde84897.0:$(TARGET_COPY_OUT_VENDOR)/etc/security/cacerts/fde84897.0 \
+    vendor/samsung/a34x/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/samsung/a34x/proprietary/vendor/etc/singletake/aifilter/filter.polarr.db:$(TARGET_COPY_OUT_VENDOR)/etc/singletake/aifilter/filter.polarr.db \
     vendor/samsung/a34x/proprietary/vendor/etc/singletake/aifilter/render.polarr.db:$(TARGET_COPY_OUT_VENDOR)/etc/singletake/aifilter/render.polarr.db \
     vendor/samsung/a34x/proprietary/vendor/etc/singletake/aifilter/scene.polarr.db:$(TARGET_COPY_OUT_VENDOR)/etc/singletake/aifilter/scene.polarr.db \
@@ -943,12 +757,17 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/etc/traceconfig.txt:$(TARGET_COPY_OUT_VENDOR)/etc/traceconfig.txt \
     vendor/samsung/a34x/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     vendor/samsung/a34x/proprietary/vendor/etc/usb_audio_accessory_only_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_accessory_only_policy_configuration.xml \
+    vendor/samsung/a34x/proprietary/vendor/etc/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/virtual-spn-conf-by-efgid1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-efgid1.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/virtual-spn-conf-by-efpnn.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-efpnn.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/virtual-spn-conf-by-efspn.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-efspn.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/virtual-spn-conf-by-imsi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-imsi.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/vramdiskd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vramdiskd.xml \
     vendor/samsung/a34x/proprietary/vendor/etc/wfd_source_capability.csv:$(TARGET_COPY_OUT_VENDOR)/etc/wfd_source_capability.csv \
+    vendor/samsung/a34x/proprietary/vendor/etc/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info \
+    vendor/samsung/a34x/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    vendor/samsung/a34x/proprietary/vendor/etc/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
+    vendor/samsung/a34x/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/samsung/a34x/proprietary/vendor/etc/wlan_common_rc:$(TARGET_COPY_OUT_VENDOR)/etc/wlan_common_rc \
     vendor/samsung/a34x/proprietary/vendor/etc/wlan_vendor_rc:$(TARGET_COPY_OUT_VENDOR)/etc/wlan_vendor_rc \
     vendor/samsung/a34x/proprietary/vendor/etc/xgf.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/xgf.cfg \
@@ -1032,73 +851,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/AVCSecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib/AVCSecureVdecCA.so \
     vendor/samsung/a34x/proprietary/vendor/lib/HEVCSecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib/HEVCSecureVdecCA.so \
     vendor/samsung/a34x/proprietary/vendor/lib/VP9SecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib/VP9SecureVdecCA.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.frameworks.cameraservice.common@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.cameraservice.common@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.frameworks.cameraservice.device@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.cameraservice.device@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.frameworks.cameraservice.device@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.cameraservice.device@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.frameworks.cameraservice.service@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.cameraservice.service@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.frameworks.cameraservice.service@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.cameraservice.service@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.frameworks.cameraservice.service@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.cameraservice.service@2.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.frameworks.sensorservice@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.common-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.common-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.common@2.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.common@2.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.common@5.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.common@5.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.common@6.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.common@6.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.common@6.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.common@6.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.common@7.0-enums.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.common@7.0-enums.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.common@7.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.common@7.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.common@7.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.common@7.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.effect@2.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.effect@2.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.effect@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.effect@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.effect@6.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.effect@6.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.effect@6.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.effect@6.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.effect@7.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.effect@7.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio.effect@7.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.effect@7.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio@2.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio@2.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio@6.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio@6.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio@7.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio@7.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.audio@7.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio@7.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.biometrics.common-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.biometrics.common-V1-ndk_platform.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.biometrics.face-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.biometrics.face-V1-ndk_platform.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.bluetooth.audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.bluetooth.audio@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.bluetooth.audio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.bluetooth.audio@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.bluetooth@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.bluetooth@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.bluetooth@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.bluetooth@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.camera.common@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.common@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.device@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.camera.device@3.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.device@3.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.camera.device@3.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.device@3.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.camera.device@3.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.device@3.4.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.camera.provider@2.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider@2.4.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.cas.native@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.cas.native@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.cas@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.cas@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.cas@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.cas@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.cas@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.cas@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.drm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.drm@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.drm@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.drm@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.drm@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.drm@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.drm@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.drm@1.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.drm@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.drm@1.4.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.gatekeeper@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gatekeeper@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.health@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.health@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.health@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.health@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.health@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.health@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.media.c2@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.media.c2@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.media.c2@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.media.c2@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.media.c2@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.media.c2@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.sensors@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.sensors@2.0-ScopedWakelock.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.sensors@2.0-ScopedWakelock.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.sensors@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.sensors@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.sensors@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.sensors@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.soundtrigger@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.soundtrigger@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.soundtrigger@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.soundtrigger@2.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.soundtrigger@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.soundtrigger@2.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.thermal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.thermal@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hardware.thermal@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.thermal@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/android.hidl.allocator@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hidl.allocator@1.0.so \
     vendor/samsung/a34x/proprietary/vendor/lib/arm.graphics-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/arm.graphics-V1-ndk_platform.so \
     vendor/samsung/a34x/proprietary/vendor/lib/audio_common-aidl-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_common-aidl-cpp.so \
     vendor/samsung/a34x/proprietary/vendor/lib/audioclient-types-aidl-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/audioclient-types-aidl-cpp.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/camera.device@3.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.2-impl.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/camera.device@3.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.3-impl.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/camera.device@3.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.4-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
     vendor/samsung/a34x/proprietary/vendor/lib/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLES_mali.so \
     vendor/samsung/a34x/proprietary/vendor/lib/egl/libGLES_meow.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLES_meow.so \
@@ -1113,16 +871,11 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.audio.effect@6.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.audio.effect@6.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.audio.effect@7.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.audio.effect@7.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.audio@2.0-impl.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.audio@6.0-impl-mediatek.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.audio@7.0-impl-mediatek.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth.audio@2.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.bluetooth.audio@2.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth.audio@2.1-impl.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.gatekeeper@1.0-impl.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.memtrack@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.memtrack@1.0-impl.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.renderscript@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.renderscript@1.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.soundtrigger@2.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.soundtrigger@2.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.soundtrigger@2.3-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/android.hardware.thermal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.thermal@1.0-impl.so \
@@ -1140,6 +893,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/gatekeeper.mt6877.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gatekeeper.mt6877.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/gralloc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gralloc.default.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/lights.mt6877.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/lights.mt6877.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/hw/local_time.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/local_time.default.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/memtrack.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/memtrack.default.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/power.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/power.default.so \
     vendor/samsung/a34x/proprietary/vendor/lib/hw/sound_trigger.primary.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.default.so \
@@ -1458,6 +1212,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libaalservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaalservice.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libadpcmdec_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadpcmdec_mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libaedv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaedv.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/libaiselector.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaiselector.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/libalsautils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libalsautils.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libapmonitor_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libapmonitor_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libappgamepq.so:$(TARGET_COPY_OUT_VENDOR)/lib/libappgamepq.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libapu_mdw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libapu_mdw.so \
@@ -1486,7 +1242,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libaudiotoolkit_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudiotoolkit_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libaurisysdemo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaurisysdemo.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libauto_framing_samsung.uniplugin@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/libauto_framing_samsung.uniplugin@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libavservices_minijail.so:$(TARGET_COPY_OUT_VENDOR)/lib/libavservices_minijail.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libbauthserver.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbauthserver.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libbauthtzcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbauthtzcommon.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libbeautyshot.arcsoft.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbeautyshot.arcsoft.so \
@@ -1508,7 +1263,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libccci_util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libccci_util.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libcmdl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcmdl.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libcmdl_ndk.mtk.vndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcmdl_ndk.mtk.vndk.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libcodec2_hidl@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_hidl@1.0.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libcodec2_hidl@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_hidl@1.1.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libcodec2_hidl@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_hidl@1.2.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libcodec2_hidl_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_hidl_plugin.so \
@@ -1520,7 +1274,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libcodec2_soft_mtk_imaadpcmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_soft_mtk_imaadpcmdec.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libcodec2_soft_mtk_mp3dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_soft_mtk_mp3dec.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libcodec2_soft_mtk_msadpcmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_soft_mtk_msadpcmdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libcodec2_vndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_vndk.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libcodec2_vpp_qt_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_vpp_qt_plugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libcodec2_vpp_rs_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_vpp_rs_plugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libcodecsolutionhelper_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodecsolutionhelper_vendor.so \
@@ -1529,8 +1282,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libcvsd_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcvsd_mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libdecrypt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdecrypt.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libdiamondvoice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiamondvoice.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/libdpframework.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdpframework.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libdre.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdre.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrm.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libdualcam_refocus_image.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdualcam_refocus_image.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libdynamiclog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdynamiclog.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libegis_fp_normal_sensor_test.so:$(TARGET_COPY_OUT_VENDOR)/lib/libegis_fp_normal_sensor_test.so \
@@ -1558,7 +1311,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libgralloc_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgralloc_metadata.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libgralloctypes_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgralloctypes_mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libgrallocusage.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgrallocusage.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libgui_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgui_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libgz_gp_client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgz_gp_client.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libgz_uree.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgz_uree.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libh264dec_customize.so:$(TARGET_COPY_OUT_VENDOR)/lib/libh264dec_customize.so \
@@ -1571,9 +1323,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libhdrvideo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdrvideo.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libheifcapture.so:$(TARGET_COPY_OUT_VENDOR)/lib/libheifcapture.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libhevce_sb.ca7.android.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhevce_sb.ca7.android.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libhidltransport.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidltransport.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libhigh_dynamic_range_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhigh_dynamic_range_bokeh.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhwbinder.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libhwscaler_camera.mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhwscaler_camera.mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libhypermotion.uniplugin@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhypermotion.uniplugin@1.0.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libhypermotion_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhypermotion_core.so \
@@ -1604,6 +1354,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpbase.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libmsbc_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmsbc_mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libmtcloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtcloader.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/libmtk_drvb.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtk_drvb.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libmtkares.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkares.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libmtkcam_debugutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkcam_debugutils.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libmtkcam_grallocutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkcam_grallocutils.so \
@@ -1622,7 +1373,9 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libmultiobject_tracker.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmultiobject_tracker.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libneuroeara.so:$(TARGET_COPY_OUT_VENDOR)/lib/libneuroeara.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libneuron_graph_delegate.mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libneuron_graph_delegate.mtk.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/libneuron_platform.vpu.so:$(TARGET_COPY_OUT_VENDOR)/lib/libneuron_platform.vpu.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libneuropilot_hal_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libneuropilot_hal_utils.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/libnir_neon_driver.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnir_neon_driver.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnir_neon_driver_ndk.mtk.vndk.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libnvram.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvram.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libnvram_sec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvram_sec.so \
@@ -1630,21 +1383,17 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libnxp_extamp_intf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnxp_extamp_intf.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libnxpsmartpaparser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnxpsmartpaparser.so \
     vendor/samsung/a34x/proprietary/vendor/lib/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboemcrypto.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libopus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libopus.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libpadm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpadm.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libpcap.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpcap.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libperfctl_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfctl_vendor.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libpixelflinger.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpixelflinger.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libpkm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpkm.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libpower_timer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpower_timer.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libpowerhal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpowerhal.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libpowerhalwrap_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpowerhalwrap_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libpq_cust_base.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpq_cust_base.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/libpq_prot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpq_prot.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libpqframework.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpqframework.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libpredeflicker_native.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpredeflicker_native.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libprofileparamstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprofileparamstorage.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libprotobuf-cpp-full-3.9.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-full-3.9.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libprotobuf-cpp-lite-3.9.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-3.9.1.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libqfp_sensortest.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqfp_sensortest.so \
     vendor/samsung/a34x/proprietary/vendor/lib/librcs_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/librcs_interface.so \
     vendor/samsung/a34x/proprietary/vendor/lib/librcs_volte_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/librcs_volte_core.so \
@@ -1687,45 +1436,18 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libspeech_enh_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspeech_enh_lib.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libspeechparser_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspeechparser_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libssengine.uniplugin@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssengine.uniplugin@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_amrnb_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_amrnb_common.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_bufferpool@2.0.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_bufferpool@2.0.1.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_bufferqueue_helper_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_bufferqueue_helper_vendor.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_enc_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_enc_common.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_flacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_flacdec.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_foundation_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_omx_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_omx_vendor.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_aacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_aacdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_aacenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_aacenc.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_amrdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_amrdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_amrnbenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_amrnbenc.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_amrwbenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_amrwbenc.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_avcdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_avcdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_avcenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_avcenc.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_flacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_flacdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_flacenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_flacenc.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_g711dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_g711dec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_gsmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_gsmdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_hevcdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_hevcdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_mp3dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_mp3dec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_mpeg2dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_mpeg2dec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_mpeg4dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_mpeg4dec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_mpeg4enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_mpeg4enc.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_opusdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_opusdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_rawdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_rawdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_vorbisdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_vorbisdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_vpxdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_vpxdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_soft_vpxenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_vpxenc.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_softomx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_softomx.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libstagefright_softomx_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_softomx_plugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefrighthw.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libstork_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstork_shared.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libsynaFpSensorTestNwd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsynaFpSensorTestNwd.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libsysenv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsysenv.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libteecl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteecl.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libtextclassifier_hash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtextclassifier_hash.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libtflite_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtflite_mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libthha.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthha.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinycompress.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libtlcWidevineModularDrm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtlcWidevineModularDrm.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libtranslator_mapi_v3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtranslator_mapi_v3.0.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libtranslator_mdmi_v2.8.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtranslator_mdmi_v2.8.2.so \
@@ -1744,7 +1466,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libvideobeauty.arcsoft.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideobeauty.arcsoft.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libvideobeauty.uniplugin@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideobeauty.uniplugin@1.0.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libvideobeauty_capture.uniplugin@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideobeauty_capture.uniplugin@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/libvorbisidec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvorbisidec.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libvp8dec_sa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvp8dec_sa.ca7.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libvp8enc_sa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvp8enc_sa.ca7.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libvp9dec_sa.ca7.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvp9dec_sa.ca7.so \
@@ -1753,8 +1474,10 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/libvpud_vcodec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpud_vcodec.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libvpx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpx.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libvt_custom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvt_custom.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwpa_client.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwvhidl.so \
     vendor/samsung/a34x/proprietary/vendor/lib/libzoomroi.samsung.so:$(TARGET_COPY_OUT_VENDOR)/lib/libzoomroi.samsung.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/mediacas/libclearkeycasplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediacas/libclearkeycasplugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib/mediadrm/libdrmclearkeyplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libdrmclearkeyplugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib/mediadrm/libmockdrmcryptoplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libmockdrmcryptoplugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libwvdrmengine.so \
@@ -1771,9 +1494,9 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/sensors.sensorhub.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.sensorhub.so \
     vendor/samsung/a34x/proprietary/vendor/lib/shared-file-region-aidl-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/shared-file-region-aidl-cpp.so \
     vendor/samsung/a34x/proprietary/vendor/lib/soundfx/libaudioeffectoffload.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudioeffectoffload.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudiopreprocessing.so \
     vendor/samsung/a34x/proprietary/vendor/lib/soundfx/libaudiopreprocessing_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudiopreprocessing_mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib/soundfx/libaudiosaplus_sec.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudiosaplus_sec.so \
+    vendor/samsung/a34x/proprietary/vendor/lib/soundfx/libdynproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdynproc.so \
     vendor/samsung/a34x/proprietary/vendor/lib/soundfx/libhapticgenerator.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libhapticgenerator.so \
     vendor/samsung/a34x/proprietary/vendor/lib/soundfx/libmyspace.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libmyspace.so \
     vendor/samsung/a34x/proprietary/vendor/lib/soundfx/libsamsungSoundbooster_plus.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libsamsungSoundbooster_plus.so \
@@ -1836,144 +1559,20 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib/vendor.samsung.hardware.tlc.payment@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.samsung.hardware.tlc.payment@1.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib/vendor.samsung.hardware.tlc.payment@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.samsung.hardware.tlc.payment@1.0.so \
     vendor/samsung/a34x/proprietary/vendor/lib/vintf-codecsolution-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/vintf-codecsolution-V2-ndk_platform.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/vndk/libstagefright_omx_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/vndk/libstagefright_omx_utils.so \
-    vendor/samsung/a34x/proprietary/vendor/lib/vndk/libstagefright_xmlparser.so:$(TARGET_COPY_OUT_VENDOR)/lib/vndk/libstagefright_xmlparser.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/APUWareApusysServer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/APUWareApusysServer.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/APUWareUtilsServer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/APUWareUtilsServer.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/APUWareXrpServer_v2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/APUWareXrpServer_v2.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/AVCSecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/AVCSecureVdecCA.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/HEVCSecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/HEVCSecureVdecCA.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/VP9SecureVdecCA.so:$(TARGET_COPY_OUT_VENDOR)/lib64/VP9SecureVdecCA.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.frameworks.cameraservice.common@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.common@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.frameworks.cameraservice.device@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.device@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.frameworks.cameraservice.device@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.device@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.frameworks.cameraservice.service@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.service@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.frameworks.cameraservice.service@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.service@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.frameworks.cameraservice.service@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.service@2.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.sensorservice@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.common-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.common@2.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@2.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.common@5.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@5.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.common@6.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@6.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.common@6.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@6.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.common@7.0-enums.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@7.0-enums.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.common@7.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@7.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.common@7.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@7.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.effect@2.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@2.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.effect@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.effect@6.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@6.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.effect@6.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@6.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.effect@7.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@7.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio.effect@7.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@7.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio@2.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@2.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio@6.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@6.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio@7.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@7.0-util.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.audio@7.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@7.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.biometrics.common-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.biometrics.common-V1-ndk_platform.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.biometrics.face-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.biometrics.face-V1-ndk_platform.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.biometrics.fingerprint@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.bluetooth.audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.audio@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.bluetooth.audio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.audio@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.bluetooth@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.bluetooth@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.camera.common@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.common@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.device@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.camera.device@3.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.device@3.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.camera.device@3.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.device@3.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.camera.device@3.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.device@3.4.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.camera.device@3.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.device@3.5.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.camera.device@3.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.device@3.6.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.camera.provider@2.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.4.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.camera.provider@2.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.5.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.camera.provider@2.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider@2.6.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.drm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.drm@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.drm@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.drm@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm@1.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.drm@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm@1.4.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.dumpstate@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.dumpstate@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.dumpstate@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.dumpstate@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.gatekeeper@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gatekeeper@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.gnss.visibility_control@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.visibility_control@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.gnss@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.gnss@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.graphics.composer@2.1-resources.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.1-resources.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.graphics.composer@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.graphics.composer@2.2-resources.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.2-resources.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.graphics.composer@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.graphics.composer@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.health@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.health@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.health@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.health@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.health@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.health@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.keymaster@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.keymaster@3.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.keymaster@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.keymaster@4.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.keymaster@4.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.keymaster@4.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.light@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.light@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.media.c2@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.media.c2@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.media.c2@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.media.c2@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.media.c2@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.media.c2@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.neuralnetworks@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.neuralnetworks@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.neuralnetworks@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.neuralnetworks@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.neuralnetworks@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.neuralnetworks@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.neuralnetworks@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.neuralnetworks@1.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.nfc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.nfc@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.nfc@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.nfc@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.nfc@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.nfc@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.power-service-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power-service-mediatek.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.power@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.power@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.power@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.radio.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.config@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.radio.config@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.config@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.radio.config@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.config@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.radio.deprecated@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.deprecated@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.radio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.radio@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.radio@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.radio@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.radio@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.4.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.radio@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.5.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.sensors@2.0-ScopedWakelock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.0-ScopedWakelock.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.sensors@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.sensors@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.soundtrigger@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.soundtrigger@2.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.soundtrigger@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.soundtrigger@2.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.soundtrigger@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.soundtrigger@2.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.tetheroffload.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.tetheroffload.config@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.tetheroffload.control@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.tetheroffload.control@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.tetheroffload.control@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.tetheroffload.control@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.thermal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.thermal@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal@2.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.usb@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.usb@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.usb@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.usb@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb@1.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi.hostapd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi.hostapd@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi.hostapd@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi.hostapd@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd@1.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi.supplicant@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi.supplicant@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi.supplicant@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi.supplicant@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant@1.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi.supplicant@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant@1.4.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.2.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.3.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.4.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hardware.wifi@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.5.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.hidl.allocator@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.allocator@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/android.system.wifi.keystore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.system.wifi.keystore@1.0.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/arm.graphics-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/arm.graphics-V1-ndk_platform.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/audio_common-aidl-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_common-aidl-cpp.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/audioclient-types-aidl-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audioclient-types-aidl-cpp.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/camera.device@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@1.0-impl.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/camera.device@3.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.2-impl.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/camera.device@3.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.3-impl.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/camera.device@3.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-impl.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/camera.device@3.5-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLES_mali.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/egl/libGLES_meow.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLES_meow.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/egl/libMEOW_data.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libMEOW_data.so \
@@ -1989,17 +1588,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.audio.effect@6.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio.effect@6.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio.effect@7.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@2.0-impl.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio@2.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth.audio@2.1-impl.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.gnss@2.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss@2.1-impl.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.memtrack@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.memtrack@1.0-impl.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.renderscript@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.renderscript@1.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.soundtrigger@2.3-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.thermal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.thermal@1.0-impl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/android.hardware.thermal@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.thermal@2.0-impl.so \
@@ -2019,6 +1613,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/gralloc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gralloc.default.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/hwcomposer.mt6877.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hwcomposer.mt6877.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/lights.mt6877.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/lights.mt6877.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/hw/local_time.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/local_time.default.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/memtrack.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/memtrack.default.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/power.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/power.default.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/hw/sound_trigger.primary.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.default.so \
@@ -2392,6 +1987,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libaibc_tuning_p2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaibc_tuning_p2.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libaibc_tuning_p3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaibc_tuning_p3.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libainrcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libainrcore.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libaiselector.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaiselector.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libalsautils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalsautils.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libapmonitor_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapmonitor_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libappgamepq.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libappgamepq.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libapu_mdw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapu_mdw.so \
@@ -2420,7 +2017,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libaudiotoolkit_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudiotoolkit_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libaurisysdemo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaurisysdemo.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libauto_framing_samsung.uniplugin@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libauto_framing_samsung.uniplugin@1.0.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libavservices_minijail_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libavservices_minijail_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libbauthserver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbauthserver.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libbauthtzcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbauthtzcommon.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libbeautyshot.arcsoft.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbeautyshot.arcsoft.so \
@@ -2437,7 +2033,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libbodyid.arcsoft.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbodyid.arcsoft.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libbwc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbwc.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libc++_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++_shared.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcam.afhal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.afhal.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcam.chdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.chdr.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcam.feature_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcam.feature_utils.so \
@@ -2511,7 +2106,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libccci_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libccci_util.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcmdl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcmdl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcmdl_ndk.mtk.vndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcmdl_ndk.mtk.vndk.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libcodec2_hidl@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_hidl@1.0.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcodec2_hidl@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_hidl@1.1.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcodec2_hidl@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_hidl@1.2.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcodec2_hidl_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_hidl_plugin.so \
@@ -2535,7 +2129,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcodec2_soft_mtk_imaadpcmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_soft_mtk_imaadpcmdec.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcodec2_soft_mtk_mp3dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_soft_mtk_mp3dec.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcodec2_soft_mtk_msadpcmdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_soft_mtk_msadpcmdec.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libcodec2_vndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_vndk.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcodec2_vpp_qt_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_vpp_qt_plugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcodec2_vpp_rs_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_vpp_rs_plugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libcodecsolutionhelper_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodecsolutionhelper_vendor.so \
@@ -2551,8 +2144,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libdip_imem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdip_imem.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libdip_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdip_postproc.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libdk_vnd_service_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdk_vnd_service_core.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libdpframework.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpframework.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libdre.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdre.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrm.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libdsms_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsms_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libdualcam_refocus_image.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdualcam_refocus_image.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libdualcam_refocus_video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdualcam_refocus_video.so \
@@ -2598,7 +2191,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libgralloc_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloc_metadata.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libgralloctypes_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloctypes_mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libgrallocusage.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgrallocusage.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libgui_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgui_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libgz_gp_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgz_gp_client.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libgz_uree.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgz_uree.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libhal.wsm.samsung.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhal.wsm.samsung.so \
@@ -2608,9 +2200,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libheichal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libheichal.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libheifcapture.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libheifcapture.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libhevce_sb.ca7.android.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhevce_sb.ca7.android.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libhidltransport.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidltransport.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libhigh_dynamic_range_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhigh_dynamic_range_bokeh.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwbinder.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libhwc2onfbadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwc2onfbadapter.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libhwm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwm.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libhwscaler_camera.mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwscaler_camera.mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libhyper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhyper.so \
@@ -2635,9 +2226,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libjpeg-alpha_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjpeg-alpha_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libjpegencoder_sw.unifunc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjpegencoder_sw.unifunc.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libkeymaster4_1support.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymaster4_1support.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libkeymaster4support.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymaster4support.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libkeymaster_messages.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymaster_messages.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libkeymaster_portable.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymaster_portable.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libkeymint.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymint.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libkeystore-engine-wifi-hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeystore-engine-wifi-hidl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libkeystore-wifi-hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeystore-wifi-hidl.so \
@@ -2647,6 +2235,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/liblivefocus_preview_engine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblivefocus_preview_engine.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/liblpcnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblpcnr.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libm4u.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libm4u.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libmcv_runtime.mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmcv_runtime.mtk.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libmdla_ut.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdla_ut.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libmfllcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmfllcore.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libminiui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libminiui.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libmmagent.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmagent.so \
@@ -2660,6 +2250,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libmsbc_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmsbc_mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libmsnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmsnr.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libmtcloader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtcloader.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libmtk_drvb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtk_drvb.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libmtkares.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkares.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libmtkcam.atmseventmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.atmseventmgr.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libmtkcam.eventcallback.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtkcam.eventcallback.so \
@@ -2743,8 +2334,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libneuron_adapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libneuron_adapter.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libneuron_graph_delegate.mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libneuron_graph_delegate.mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libneuron_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libneuron_platform.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libneuron_platform.vpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libneuron_platform.vpu.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libneuron_runtime.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libneuron_runtime.5.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libneuron_runtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libneuron_runtime.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libneuron_wrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libneuron_wrapper.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libneuropilot_hal_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libneuropilot_hal_utils.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libnir_neon_driver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnir_neon_driver.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnir_neon_driver_ndk.mtk.vndk.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libnvram.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnvram.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libnvram_sec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnvram_sec.so \
@@ -2753,20 +2348,16 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libnxpsmartpaparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnxpsmartpaparser.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liboemcrypto.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libpadm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpadm.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libpcap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpcap.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libperfctl_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfctl_vendor.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libpixelflinger.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpixelflinger.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libpkm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpkm.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libpower_timer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpower_timer.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libpowerhal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpowerhal.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libpowerhalwrap_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpowerhalwrap_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libpq_cust_base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpq_cust_base.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libpq_prot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpq_prot.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libpqframework.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpqframework.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libpqparamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpqparamparser.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libprofileparamstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprofileparamstorage.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libprotobuf-cpp-full-3.9.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-3.9.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libprotobuf-cpp-lite-3.9.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-3.9.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libpuresoftkeymasterdevice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpuresoftkeymasterdevice.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libqfp_sensortest.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqfp_sensortest.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libratconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libratconfig.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/librecordalive.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librecordalive.so \
@@ -2823,7 +2414,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libspeechparser_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspeechparser_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libssengine.uniplugin@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssengine.uniplugin@1.0.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libstagefright_bufferpool@2.0.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_bufferpool@2.0.1.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libstagefright_flacdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_flacdec.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libstagefright_foundation_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation_vendor.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefrighthw.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libstereoinfoaccessor_vsdof.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstereoinfoaccessor_vsdof.so \
@@ -2832,10 +2422,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libsynaFpSensorTestNwd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsynaFpSensorTestNwd.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libsysenv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsysenv.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libteecl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libteecl.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libtextclassifier_hash.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtextclassifier_hash.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libtflite_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtflite_mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libthha.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthha.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libtlcWidevineModularDrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlcWidevineModularDrm.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libtlc_comm_iccc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlc_comm_iccc.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libtlc_direct_comm_iccc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlc_direct_comm_iccc.so \
@@ -2859,10 +2447,13 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/libvkservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvkservice.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libvpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpu.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libvpu5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpu5.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libwifi-hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwpa_client.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libwsmd_functions.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwsmd_functions.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwvhidl.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libz_stable.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libz_stable.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/libzoomroi.samsung.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libzoomroi.samsung.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/mediacas/libclearkeycasplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mediacas/libclearkeycasplugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/mediadrm/libdrmclearkeyplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mediadrm/libdrmclearkeyplugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/mediadrm/libmockdrmcryptoplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mediadrm/libmockdrmcryptoplugin.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mediadrm/libwvdrmengine.so \
@@ -2887,9 +2478,9 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/sensors.sensorhub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.sensorhub.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/shared-file-region-aidl-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/shared-file-region-aidl-cpp.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/soundfx/libaudioeffectoffload.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudioeffectoffload.so \
-    vendor/samsung/a34x/proprietary/vendor/lib64/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudiopreprocessing.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/soundfx/libaudiopreprocessing_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudiopreprocessing_mtk.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/soundfx/libaudiosaplus_sec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudiosaplus_sec.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/soundfx/libdynproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdynproc.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/soundfx/libhapticgenerator.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libhapticgenerator.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/soundfx/libmyspace.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libmyspace.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/soundfx/libsamsungSoundbooster_plus.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libsamsungSoundbooster_plus.so \
@@ -2985,6 +2576,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk_platform.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/vendor.samsung.hardware.security.hdcp.wifidisplay-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.security.hdcp.wifidisplay-V2-ndk_platform.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/vendor.samsung.hardware.security.skpm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.security.skpm@1.0.so \
+    vendor/samsung/a34x/proprietary/vendor/lib64/vendor.samsung.hardware.security.ssu-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.security.ssu-V1-ndk_platform.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/vendor.samsung.hardware.security.widevine.keyprov-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.security.widevine.keyprov-V1-ndk_platform.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/vendor.samsung.hardware.security.wsm.service-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.security.wsm.service-V1-ndk_platform.so \
@@ -3013,9 +2605,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/lib64/vendor.samsung.hardware.wifi@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.wifi@2.2.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/vendor.samsung.hardware.wifi@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.wifi@2.3.so \
     vendor/samsung/a34x/proprietary/vendor/lib64/vintf-codecsolution-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vintf-codecsolution-V2-ndk_platform.so \
-    vendor/samsung/a34x/proprietary/vendor/odm_dlkm/etc/NOTICE.xml.gz:$(TARGET_COPY_OUT_VENDOR)/odm_dlkm/etc/NOTICE.xml.gz \
-    vendor/samsung/a34x/proprietary/vendor/odm_dlkm/etc/build.prop:$(TARGET_COPY_OUT_VENDOR)/odm_dlkm/etc/build.prop \
-    vendor/samsung/a34x/proprietary/vendor/recovery-from-boot.p:$(TARGET_COPY_OUT_VENDOR)/recovery-from-boot.p \
     vendor/samsung/a34x/proprietary/vendor/res/images/lcd_test_00.png:$(TARGET_COPY_OUT_VENDOR)/res/images/lcd_test_00.png \
     vendor/samsung/a34x/proprietary/vendor/res/images/lcd_test_01.png:$(TARGET_COPY_OUT_VENDOR)/res/images/lcd_test_01.png \
     vendor/samsung/a34x/proprietary/vendor/res/images/lcd_test_02.png:$(TARGET_COPY_OUT_VENDOR)/res/images/lcd_test_02.png \
@@ -3048,6 +2637,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/tee/00000000-0000-0000-0000-505256544545:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-505256544545 \
     vendor/samsung/a34x/proprietary/vendor/tee/00000000-0000-0000-0000-5345435f4652:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-5345435f4652 \
     vendor/samsung/a34x/proprietary/vendor/tee/00000000-0000-0000-0000-54412d48444d:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-54412d48444d \
+    vendor/samsung/a34x/proprietary/vendor/tee/00000000-0000-0000-0000-544545535355:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-544545535355 \
     vendor/samsung/a34x/proprietary/vendor/tee/00000000-0000-0000-0000-54496473706c:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-54496473706c \
     vendor/samsung/a34x/proprietary/vendor/tee/00000000-0000-0000-0000-544974684c6c:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-544974684c6c \
     vendor/samsung/a34x/proprietary/vendor/tee/00000000-0000-0000-0000-564c544b5052:$(TARGET_COPY_OUT_VENDOR)/tee/00000000-0000-0000-0000-564c544b5052 \
@@ -3070,7 +2660,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a34x/proprietary/vendor/tee/driver/08050000-0000-0000-0000-000000001319:$(TARGET_COPY_OUT_VENDOR)/tee/driver/08050000-0000-0000-0000-000000001319 \
     vendor/samsung/a34x/proprietary/vendor/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_:$(TARGET_COPY_OUT_VENDOR)/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_ \
     vendor/samsung/a34x/proprietary/vendor/tee/ffffffff-0000-0000-0000-000000000030:$(TARGET_COPY_OUT_VENDOR)/tee/ffffffff-0000-0000-0000-000000000030 \
-    vendor/samsung/a34x/proprietary/vendor/tee/tui/resolution_common/ID00000100:$(TARGET_COPY_OUT_VENDOR)/tee/tui/resolution_common/ID00000100 \
+    vendor/samsung/a34x/proprietary/vendor/tee/tui/resolution_common/ID00000100:$(TARGET_COPY_OUT_VENDOR)/tee/tui/resolution_common/ID00000100
+
 PRODUCT_PACKAGES += \
     com.samsung.android.authfw.ta.preload \
     com.samsung.android.biometrics.face.signed \
@@ -3079,19 +2670,27 @@ PRODUCT_PACKAGES += \
     GoogleTetheringResOverlay \
     InProcessTetheringResOverlay \
     TetheringResOverlay \
-    HotwordEnrollmentOKGoogleEx4RISCV \
-    HotwordEnrollmentXGoogleEx4RISCV \
-    com.android.hotwordenrollment.common.util \
+    android.hardware.cas@1.2-service-lazy.xml \
+    android.hardware.dumpstate@1.1-service-lazy.xml \
     android.hardware.health@2.1-samsung.xml \
     android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml \
-#    android.hardware.sensors@2.0-multihal.xml \
+    android.hardware.sensors@2.0-multihal.xml \
+    android.hardware.usb@1.3-service.coral.xml \
     android.hardware.wifi.hostapd.xml \
     android.hardware.wifi.supplicant.xml \
     android.hardware.wifi@1.0-service.xml \
+    deviceManifest.xml \
+    engmode_manifest.xml \
+    face-default-sec.xml \
+    hyper-default-sec.xml \
+    lights-default-sec.xml \
     manifest_android.hardware.drm@1.4-service.clearkey.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
+    manifest_hwcomposer.xml \
     power-default.xml \
     sec.android.hardware.nfc@1.2-service.xml \
+    sec_c2_manifest_default0_1_2.xml \
+    vaultkeeper_manifest.xml \
     vendor.samsung.hardware.authfw@1.0-manifest.xml \
     vendor.samsung.hardware.biometrics.fingerprint@3.0-service.xml \
     vendor.samsung.hardware.radio.exclude.mediatek.xml \
@@ -3099,6 +2698,7 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio_manifest_2_30.xml \
     vendor.samsung.hardware.security.fkeymaster-service.xml \
     vendor.samsung.hardware.security.hdcp.wifidisplay-default.xml \
+    vendor.samsung.hardware.security.ssu-manifest.xml \
     vendor.samsung.hardware.security.widevine.keyprov-service.xml \
     vendor.samsung.hardware.security.wsm.service-manifest.xml \
     vendor.samsung.hardware.sehradio_manifest_2_30.xml \

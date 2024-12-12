@@ -72,35 +72,22 @@ android_app_import {
 	soc_specific: true,
 }
 
-android_app_import {
-	name: "HotwordEnrollmentOKGoogleEx4RISCV",
+prebuilt_etc_xml {
+	name: "android.hardware.cas@1.2-service-lazy.xml",
 	owner: "samsung",
-	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleEx4RISCV/HotwordEnrollmentOKGoogleEx4RISCV.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.cas@1.2-service-lazy.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
 }
 
-android_app_import {
-	name: "HotwordEnrollmentXGoogleEx4RISCV",
+prebuilt_etc_xml {
+	name: "android.hardware.dumpstate@1.1-service-lazy.xml",
 	owner: "samsung",
-	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleEx4RISCV/HotwordEnrollmentXGoogleEx4RISCV.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-dex_import {
-	name: "com.android.hotwordenrollment.common.util",
-	owner: "samsung",
-	jars: ["proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar"],
-	system_ext_specific: true,
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service-lazy.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -121,7 +108,7 @@ prebuilt_etc_xml {
 	soc_specific: true,
 }
 
-/*prebuilt_etc_xml {
+prebuilt_etc_xml {
 	name: "android.hardware.sensors@2.0-multihal.xml",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.sensors@2.0-multihal.xml",
@@ -129,7 +116,15 @@ prebuilt_etc_xml {
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
-*/
+
+prebuilt_etc_xml {
+	name: "android.hardware.usb@1.3-service.coral.xml",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.usb@1.3-service.coral.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
 
 prebuilt_etc_xml {
 	name: "android.hardware.wifi.hostapd.xml",
@@ -159,6 +154,51 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+	name: "deviceManifest.xml",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/deviceManifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "engmode_manifest.xml",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/engmode_manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "face-default-sec.xml",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/face-default-sec.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "hyper-default-sec.xml",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/hyper-default-sec.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "lights-default-sec.xml",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/lights-default-sec.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
 	name: "manifest_android.hardware.drm@1.4-service.clearkey.xml",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.clearkey.xml",
@@ -177,6 +217,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+	name: "manifest_hwcomposer.xml",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/manifest_hwcomposer.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
 	name: "power-default.xml",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/power-default.xml",
@@ -189,6 +238,24 @@ prebuilt_etc_xml {
 	name: "sec.android.hardware.nfc@1.2-service.xml",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/sec.android.hardware.nfc@1.2-service.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "sec_c2_manifest_default0_1_2.xml",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_2.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vaultkeeper_manifest.xml",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vaultkeeper_manifest.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
@@ -252,6 +319,15 @@ prebuilt_etc_xml {
 	name: "vendor.samsung.hardware.security.hdcp.wifidisplay-default.xml",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hdcp.wifidisplay-default.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.security.ssu-manifest.xml",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.security.ssu-manifest.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
